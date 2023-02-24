@@ -7,11 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CerbosDemoApi", "src\Cerbos
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E89B2EEF-883D-4C03-8D83-3002D5AA4DC8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cerbos-policies", "cerbos-policies", "{C4EA0AF5-E582-401C-B5BC-29FA46F2AAF3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cerbos", "cerbos", "{C4EA0AF5-E582-401C-B5BC-29FA46F2AAF3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "policies", "policies", "{755A1F99-E3B8-4B13-9DFF-5EC0E89A5A19}"
 	ProjectSection(SolutionItems) = preProject
-		cerbos-policies\policies\cerbos.yaml = cerbos-policies\policies\cerbos.yaml
+		cerbos\policies\cerbos.yaml = cerbos\policies\cerbos.yaml
 	EndProjectSection
 EndProject
 Global

@@ -3,13 +3,11 @@ resourcePolicy:
   resource: "agreement"
   version: "default"
   rules:
-    # admins can do all actions
     - actions: ["*"]
       effect: EFFECT_ALLOW
       roles:
         - admin
 
-    # user role can read and list contacts
     - actions: ["read", "list"]
       effect: EFFECT_ALLOW
       roles:
@@ -18,18 +16,12 @@ resourcePolicy:
     - actions: ["create"]
       effect: EFFECT_ALLOW
       roles:
-        - user
-      condition:
-        match:
-          expr: ("sales" in request.principal.attr.groups)
+        - manager
 
     - actions: ["update"]
       effect: EFFECT_ALLOW
       roles:
-        - user
+        - manager
       condition:
         match:
-          all:
-            of:
-            - expr: request.resource.attr.owner == request.principal.id
-            - expr: ("sales" in request.principal.attr.groups)
+          expr: request.resource.attr.owner == request.principal.id
